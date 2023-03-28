@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6278F7;
+    width: 100%;
+    padding: 75px 0;
+}
+
+.footer .background{
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.footer .redesSociais{
+    gap: 34px;
+    display: flex;
+}
+
+.footer .creditos{
+    color: #fff;
+}
