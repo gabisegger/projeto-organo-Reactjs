@@ -222,8 +222,8 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
-  function deleteColaborador(){
-    console.log('deletando colaborador')
+  function deleteColaborador(id){
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
   function mudarCorDoTime(cor, id){
