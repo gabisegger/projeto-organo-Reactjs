@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Botao from '../Botao';
-import CampoTexto from '../CampoTexto';
+import Campo from '../Campo';
 import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css';
 
@@ -31,14 +31,14 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto 
+                <Campo 
                     obrigatorio={true} 
                     label="Nome" 
                     placeholder="Digite seu nome"
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
-                <CampoTexto 
+                <Campo
                     obrigatorio={true} 
                     label="Cargo" 
                     placeholder="Digite seu cargo"
@@ -46,7 +46,7 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                     aoAlterado={valor => setCargo(valor)}
                 
                 />
-                <CampoTexto 
+                <Campo
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"
                     valor={imagem}
@@ -66,15 +66,16 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                 cadastrarTime({nome: nomeTime, cor: corTime})
             }}>
                 <h2>Preencha os dados para criar um novo time.</h2>
-                <CampoTexto 
+                <Campo
                     obrigatorio 
                     label="Nome do time" 
                     placeholder="Digite o nome do time"
                     valor={nomeTime}
                     aoAlterado={valor => setNomeTime(valor)}
                 />
-                <CampoTexto 
+                <Campo 
                     obrigatorio 
+                    type= 'color'
                     label="Cor" 
                     placeholder="Digite a cor do time"
                     valor={corTime}
